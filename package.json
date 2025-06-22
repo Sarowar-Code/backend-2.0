@@ -1,18 +1,21 @@
 {
-    "name": "backend-2.0",
-    "version": "1.0.0",
-    "description": "A production ready backend",
-    "license": "ISC",
-    "author": "",
-    "type": "module",
-    "main": "index.js",
-    "scripts": {
-        "dev": "nodemon src/index.js"
-    },
-    "devDependencies": {
-        "nodemon": "^3.1.10"
-    },
-    "dependencies": {
-        "prettier": "^3.5.3"
-    }
+  "name": "backend-2.0",
+  "version": "1.0.0",
+  "description": "A production ready backend",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0",
+    "prettier": "^3.5.3"
+  }
 }
