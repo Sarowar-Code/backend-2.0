@@ -29,7 +29,7 @@ const userSchema = new Schema(
       type: String, // cloudinary url
       required: true,
     },
-    coverimage: {
+    coverImage: {
       type: String, // cloudinary url
     },
     watchhistory: [
@@ -46,7 +46,7 @@ const userSchema = new Schema(
       type: String,
     },
   },
-  { timestamps: ture }
+  { timestamps: true }
 );
 
 userSchema.pre("save", async function (next) {
@@ -75,6 +75,7 @@ userSchema.methods.generateAccessToken = function () {
     }
   );
 };
+
 userSchema.methods.generateRefreshToken = function () {
   // Generate a refresh token
   return jwt.sign(
